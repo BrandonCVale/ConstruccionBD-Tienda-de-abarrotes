@@ -1,0 +1,1948 @@
+Código Fuente: 
+<%@ Page Language="VB" %>
+
+<!DOCTYPE html>
+<script runat="server">
+
+    Protected Sub Button1_Click(sender As Object, e As EventArgs)
+        Response.Redirect("MenuInsertar.aspx")
+
+
+    End Sub
+
+    Protected Sub Button3_Click(sender As Object, e As EventArgs)
+        Response.Redirect("MenuConsulta.aspx")
+
+    End Sub
+
+    Protected Sub Button2_Click(sender As Object, e As EventArgs)
+        Response.Redirect("MenuActulizar.aspx")
+
+    End Sub
+
+    Protected Sub Page_Load(sender As Object, e As EventArgs)
+
+    End Sub
+
+</script>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta charset="utf-8" />
+    <title></title>    
+    <style type="text/css">
+        .auto-style1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: large;
+            color: #FF9900;
+        }
+        .auto-style2 {
+            font-family: "Segoe UI Variable Display Semib";
+            text-transform: uppercase;
+        }
+        .auto-style3 {
+            font-family: "Segoe UI Variable Display Semib";
+            background-color: #FF9900;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">   
+        <p class="auto-style1">
+            <strong style="text-transform: uppercase; font-family: 'Segoe UI Variable Display Semib';">Menu</strong></p>
+        <p class="auto-style2">
+            Bienvenido a abarrotes &quot;Don Chuchin&quot;</p>
+        <p>
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Insertar Registro" Height="26px" style="color: #FFFFFF; font-weight: 700; " Width="218px" CssClass="auto-style3" />
+        </p>
+        <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Actualiza Registro" Height="26" Width="218px" style="color: #FFFFFF; font-weight: 700; " CssClass="auto-style3" />
+        <p>
+            <asp:Button ID="Button3" runat="server" Text="Consultar Registro" OnClick="Button3_Click" style="color: #FFFFFF; font-weight: 700; " Width="216px" Height="28px" CssClass="auto-style3" />
+        </p>
+    </form>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<script runat="server">
+
+    Protected Sub btnInsertarClientes_Click(sender As Object, e As EventArgs)
+        Response.Redirect("InsertarClientes.aspx")
+
+
+    End Sub
+
+    Protected Sub btnInsertarCompras_Click(sender As Object, e As EventArgs)
+        Response.Redirect("InsertarCompras.aspx")
+
+
+    End Sub
+
+    Protected Sub bntInsertarInventario_Click(sender As Object, e As EventArgs)
+        Response.Redirect("InsertarInventario.aspx")
+
+
+    End Sub
+
+    Protected Sub btnInsertarPersonal_Click(sender As Object, e As EventArgs)
+        Response.Redirect("InsertarPersonal.aspx")
+
+
+    End Sub
+
+    Protected Sub btnInsertarProductos_Click(sender As Object, e As EventArgs)
+        Response.Redirect("InsertarProductos.aspx")
+
+
+    End Sub
+
+    Protected Sub btnInsertarProductosv_Click(sender As Object, e As EventArgs)
+        Response.Redirect("InsertarProductosVentas.aspx")
+    End Sub
+
+    Protected Sub btnInsertarProveedores_Click(sender As Object, e As EventArgs)
+        Response.Redirect("InsertarProveedores.aspx")
+    End Sub
+
+    Protected Sub Button8_Click(sender As Object, e As EventArgs)
+        Response.Redirect("InsertarVentas.aspx")
+    End Sub
+
+    Protected Sub Page_Load(sender As Object, e As EventArgs)
+
+    End Sub
+</script>
+
+
+
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta charset="utf-8" />
+    <title></title>    
+    <style type="text/css">
+        .auto-style1 {
+            font-family: "Segoe UI Variable Display Semib";
+            text-transform: uppercase;
+        }
+        .auto-style2 {
+            font-family: "Segoe UI Variable Display Semib";
+            color: #FFFFFF;
+            background-color: #FF9900;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <p class="auto-style1">
+            Selecciona la&nbsp; tabla para insertar un registro</p>
+        <p>
+            <asp:Button ID="btnInsertarClientes" runat="server" Text="Clientes" Height="26px" OnClick="btnInsertarClientes_Click" style="font-size: small; font-weight: 700; text-align: left;" Width="101px" CssClass="auto-style2" />
+        </p>
+        <p>
+            <asp:Button ID="btnInsertarCompras" runat="server" Text="Compras" OnClick="btnInsertarCompras_Click" style="font-size: small; font-weight: 700; " Width="101px" CssClass="auto-style2" />
+        </p>
+        <asp:Button ID="bntInsertarInventario" runat="server" Text="Inventario" OnClick="bntInsertarInventario_Click" style="font-weight: 700; " Width="101px" CssClass="auto-style2" />
+        <p>
+            <asp:Button ID="btnInsertarPersonal" runat="server" Text="Personal" OnClick="btnInsertarPersonal_Click" style="font-weight: 700; " Width="101px" CssClass="auto-style2" />
+        </p>
+        <asp:Button ID="btnInsertarProductos" runat="server" Text="Productos" OnClick="btnInsertarProductos_Click" style="font-weight: 700; " Width="101px" CssClass="auto-style2" />
+        <p>
+            <asp:Button ID="btnInsertarProductosv" runat="server" Text="Productos V" OnClick="btnInsertarProductosv_Click" style="font-weight: 700; " Width="101px" CssClass="auto-style2" />
+        </p>
+        <asp:Button ID="btnInsertarProveedores" runat="server" Text="Proveedores" OnClick="btnInsertarProveedores_Click" style="font-weight: 700; " Width="101px" CssClass="auto-style2" />
+        <p>
+            <asp:Button ID="Button8" runat="server" Text="Ventas" OnClick="Button8_Click" style="font-weight: 700; " Width="100px" CssClass="auto-style2" />
+        </p>
+    </form>
+</body>
+</html>
+
+
+<%@ Page Language="VB" %>
+
+<!DOCTYPE html>
+<script runat="server">
+
+    Protected Sub btnInsertarClientes_Click(sender As Object, e As EventArgs)
+        Response.Redirect("ActualizarClientes.aspx")
+
+
+    End Sub
+
+    Protected Sub btnActualizarCompras_Click(sender As Object, e As EventArgs)
+        Response.Redirect("ActualizarCompras.aspx")
+
+    End Sub
+
+    Protected Sub Page_Load(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Protected Sub btnActualizarInventario_Click(sender As Object, e As EventArgs)
+        Response.Redirect("ActualizarInventario.aspx")
+
+    End Sub
+
+    Protected Sub btnActualizarPersonal_Click(sender As Object, e As EventArgs)
+        Response.Redirect("ActualizarPersonal.aspx")
+
+    End Sub
+
+    Protected Sub btnActualizarProductos_Click(sender As Object, e As EventArgs)
+        Response.Redirect("ActualizarProductos.aspx")
+
+    End Sub
+
+    Protected Sub btnActualizarProductosv_Click(sender As Object, e As EventArgs)
+        Response.Redirect("ActualizarProductosVenta.aspx")
+
+    End Sub
+
+    Protected Sub btnActualizarProveedores_Click(sender As Object, e As EventArgs)
+        Response.Redirect("ActualizarProveedor.aspx")
+
+    End Sub
+
+    Protected Sub btnActualizarVentas_Click(sender As Object, e As EventArgs)
+        Response.Redirect("ActualizarVentas.aspx")
+
+    End Sub
+</script>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta charset="utf-8" />
+    <title></title>    
+    <style type="text/css">
+        .auto-style1 {
+            font-family: "Segoe UI Variable Display Semib";
+            text-transform: uppercase;
+        }
+        .auto-style2 {
+            font-weight: bold;
+            background-color: #FF9900;
+            font-family: "Segoe UI Variable Display Semib";
+            color: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">   
+        <span class="auto-style1">Selecciona la tabla para actualizar un registro</span><p>
+            <asp:Button ID="btnActualizarClientes" runat="server" Text="Clientes" Height="26px" OnClick="btnInsertarClientes_Click" CssClass="auto-style2" />
+        </p>
+        <p>
+            <asp:Button ID="btnActualizarCompras" runat="server" Text="Compras" OnClick="btnActualizarCompras_Click" CssClass="auto-style2" />
+        </p>
+        <p>
+        <asp:Button ID="btnActualizarInventario" runat="server" Text="Inventario" OnClick="btnActualizarInventario_Click" CssClass="auto-style2" />
+        </p>
+        <p>
+            <asp:Button ID="btnActualizarPersonal" runat="server" Text="Personal" OnClick="btnActualizarPersonal_Click" CssClass="auto-style2" />
+        </p>
+        <p>
+        <asp:Button ID="btnActualizarProductos" runat="server" Text="Productos" Height="26px" OnClick="btnActualizarProductos_Click" CssClass="auto-style2" />
+        </p>
+        <p>
+            <asp:Button ID="btnActualizarProductosv" runat="server" Text="Productos V" OnClick="btnActualizarProductosv_Click" CssClass="auto-style2" />
+        </p>
+        <p>
+        <asp:Button ID="btnActualizarProveedores" runat="server" Text="Proveedores" OnClick="btnActualizarProveedores_Click" CssClass="auto-style2" />
+        </p>
+        <p>
+            <asp:Button ID="btnActualizarVentas" runat="server" Text="Ventas" OnClick="btnActualizarVentas_Click" CssClass="auto-style2" />
+        </p>
+    </form>
+</body>
+</html>
+
+
+<%@ Page Language="C#" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            font-family: "Segoe UI Variable Display Semib";
+            color: #FF9900;
+        }
+        .auto-style3 {
+            background-color: #FFFFFF;
+        }
+        .auto-style4 {
+            font-family: "Segoe UI Variable Display Semib";
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="auto-style1">
+            CONSULTAR</div>
+        <p>
+            <span class="auto-style4">Nombre de la tabla:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+            <asp:TextBox ID="txtNombreTabla" runat="server" CssClass="auto-style3"></asp:TextBox>
+        </p>
+        <p>
+            <span class="auto-style4">Nombre de la columna:</span>&nbsp;&nbsp; &nbsp;
+            <asp:TextBox ID="txtNombreColumna" runat="server" CssClass="auto-style3"></asp:TextBox>
+        </p>
+        <p>
+            <span class="auto-style4">Nombre del Valor:&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+            <asp:TextBox ID="txtValor" runat="server" CssClass="auto-style3"></asp:TextBox>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </p>
+        <asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1ConsultarDatos" Width="533px">
+        </asp:GridView>
+        <asp:SqlDataSource ID="SqlDataSource1ConsultarDatos" runat="server" ConnectionString="<%$ ConnectionStrings:abarrotesConnectionString %>" SelectCommand="BuscarDatos" SelectCommandType="StoredProcedure">
+            <SelectParameters>
+                <asp:ControlParameter ControlID="txtNombreTabla" Name="tabla" PropertyName="Text" Type="String" />
+                <asp:ControlParameter ControlID="txtNombreColumna" Name="columnaBusqueda" PropertyName="Text" Type="String" />
+                <asp:ControlParameter ControlID="txtValor" Name="valorBusqueda" PropertyName="Text" Type="String" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+        <p>
+            <asp:Button ID="btnConsultar" runat="server" Text="Consultar" style="font-weight: 700; color: #FFFFFF; background-color: #FF9900;" />
+        </p>
+    </form>
+</body>
+</html>
+
+
+<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="InsertarClientes.aspx.vb" Inherits="Interfaz_BD_Tienda.InsertarClientes" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            font-family: "Segoe UI Variable Display Semib";
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div style="color: #FF9900; font-family: 'Segoe UI Variable Display Semib'">
+            AGREGAR NUEVO CLIENTE DE LA TIENDA.</div>
+        <p>
+            <span class="auto-style1">RFC:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+            <asp:TextBox ID="txtrfc" runat="server" CssClass="auto-style1"></asp:TextBox>
+        </p>
+        <p>
+            <span class="auto-style1">Nombre:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <asp:TextBox ID="txtnom" runat="server" CssClass="auto-style1"></asp:TextBox>
+        </p>
+        <p>
+            <span class="auto-style1">Apellido Paterno:&nbsp;&nbsp;
+            </span>
+            <asp:TextBox ID="txtapePa" runat="server" CssClass="auto-style1"></asp:TextBox>
+        </p>
+        <p>
+            <span class="auto-style1">Apellido Materno:&nbsp;
+            </span>
+            <asp:TextBox ID="txtapeMa" runat="server" CssClass="auto-style1"></asp:TextBox>
+        </p>
+        <p>
+            <span class="auto-style1">Calle:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+            <asp:TextBox ID="txtcalle" runat="server" CssClass="auto-style1"></asp:TextBox>
+        </p>
+        <p>
+            <span class="auto-style1">Numero:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+            <asp:TextBox ID="txtnum" runat="server" CssClass="auto-style1"></asp:TextBox>
+        </p>
+        <p>
+            <span class="auto-style1">Colonia:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+            <asp:TextBox ID="txtcol" runat="server" CssClass="auto-style1"></asp:TextBox>
+        </p>
+        <p>
+            <span class="auto-style1">C.P:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+            <asp:TextBox ID="txtcp" runat="server" CssClass="auto-style1"></asp:TextBox>
+        </p>
+        <p>
+            <span class="auto-style1">Alcaldia:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+            <asp:TextBox ID="txtalca" runat="server" CssClass="auto-style1"></asp:TextBox>
+        </p>
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="Button1" runat="server" Text="Guardar" BackColor="#FF9900" CssClass="auto-style1" ForeColor="White" />
+        </p>
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="RFC" DataSourceID="SqlDataTiendaAba" style="font-family: 'Segoe UI Variable Display Semib'">
+            <Columns>
+                <asp:BoundField DataField="RFC" HeaderText="RFC" ReadOnly="True" SortExpression="RFC" />
+                <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
+                <asp:BoundField DataField="ApePaterno" HeaderText="ApePaterno" SortExpression="ApePaterno" />
+                <asp:BoundField DataField="ApeMaterno" HeaderText="ApeMaterno" SortExpression="ApeMaterno" />
+                <asp:BoundField DataField="Calle" HeaderText="Calle" SortExpression="Calle" />
+                <asp:BoundField DataField="Num" HeaderText="Num" SortExpression="Num" />
+                <asp:BoundField DataField="Colonia" HeaderText="Colonia" SortExpression="Colonia" />
+                <asp:BoundField DataField="CP" HeaderText="CP" SortExpression="CP" />
+                <asp:BoundField DataField="Alcaldia" HeaderText="Alcaldia" SortExpression="Alcaldia" />
+            </Columns>
+        </asp:GridView>
+        <asp:SqlDataSource ID="SqlDataTiendaAba" runat="server" ConnectionString="<%$ ConnectionStrings:abarrotesConnectionString3 %>" SelectCommand="InsertarCliente" SelectCommandType="StoredProcedure">
+            <SelectParameters>
+                <asp:ControlParameter ControlID="txtrfc" Name="RFC" PropertyName="Text" Type="String" />
+                <asp:ControlParameter ControlID="txtnom" Name="Nombre" PropertyName="Text" Type="String" />
+                <asp:ControlParameter ControlID="txtapePa" Name="ApePaterno" PropertyName="Text" Type="String" />
+                <asp:ControlParameter ControlID="txtapeMa" Name="ApeMaterno" PropertyName="Text" Type="String" />
+                <asp:ControlParameter ControlID="txtcalle" Name="Calle" PropertyName="Text" Type="String" />
+                <asp:ControlParameter ControlID="txtnum" Name="Num" PropertyName="Text" Type="Int32" />
+                <asp:ControlParameter ControlID="txtcol" Name="Colonia" PropertyName="Text" Type="String" />
+                <asp:ControlParameter ControlID="txtcp" Name="CP" PropertyName="Text" Type="Int32" />
+                <asp:ControlParameter ControlID="txtalca" Name="Alcaldia" PropertyName="Text" Type="String" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+    </form>
+</body>
+</html>
+
+<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="InsertarCompras.aspx.vb" Inherits="Interfaz_BD_Tienda.InsertarCompras" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            font-family: "Segoe UI Variable Display Semib";
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div style="color: #FF9900; font-family: 'Segoe UI Variable Display Semib'">
+            INGRESAR NUEVA COMPRA</div>
+        <p>
+            <span class="auto-style1"># Compra:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <asp:TextBox ID="txtnumCom" runat="server" CssClass="auto-style1"></asp:TextBox>
+        </p>
+        <p>
+            <span class="auto-style1">Tipo de pago:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <asp:TextBox ID="txttipoPa" runat="server" CssClass="auto-style1"></asp:TextBox>
+        </p>
+        <p>
+            <span class="auto-style1">Subtotal:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <asp:TextBox ID="txtsub" runat="server" CssClass="auto-style1"></asp:TextBox>
+        </p>
+        <p>
+            <span class="auto-style1">IVA:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+            <asp:TextBox ID="txtiva" runat="server" CssClass="auto-style1"></asp:TextBox>
+        </p>
+        <p>
+            <span class="auto-style1">Total:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+            <asp:TextBox ID="txttotal" runat="server" CssClass="auto-style1"></asp:TextBox>
+        </p>
+        <p>
+            <span class="auto-style1">Proveedores RFC:&nbsp;&nbsp; </span>
+            <asp:TextBox ID="txtproverfc" runat="server" CssClass="auto-style1"></asp:TextBox>
+        </p>
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="Button2" runat="server" Text="Guardar" BackColor="#FF9900" ForeColor="White" style="font-family: 'Segoe UI Variable Display Semib'" />
+        </p>
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="NumC" DataSourceID="SqlDataTiendaAba" style="font-family: 'Segoe UI Variable Display Semib'">
+            <Columns>
+                <asp:BoundField DataField="NumC" HeaderText="NumC" ReadOnly="True" SortExpression="NumC" />
+                <asp:BoundField DataField="TipoPago" HeaderText="TipoPago" SortExpression="TipoPago" />
+                <asp:BoundField DataField="Subtotal" HeaderText="Subtotal" SortExpression="Subtotal" />
+                <asp:BoundField DataField="IVA" HeaderText="IVA" SortExpression="IVA" />
+                <asp:BoundField DataField="Total" HeaderText="Total" SortExpression="Total" />
+                <asp:BoundField DataField="Proveedores_RFC" HeaderText="Proveedores_RFC" SortExpression="Proveedores_RFC" />
+            </Columns>
+        </asp:GridView>
+        <asp:SqlDataSource ID="SqlDataTiendaAba" runat="server" ConnectionString="<%$ ConnectionStrings:abarrotesConnectionString3 %>" SelectCommand="InsertarCompra" SelectCommandType="StoredProcedure">
+            <SelectParameters>
+                <asp:ControlParameter ControlID="txtnumCom" Name="NumC" PropertyName="Text" Type="Int32" />
+                <asp:ControlParameter ControlID="txttipoPa" Name="TipoPago" PropertyName="Text" Type="String" />
+                <asp:ControlParameter ControlID="txtsub" Name="Subtotal" PropertyName="Text" Type="Decimal" />
+                <asp:ControlParameter ControlID="txtiva" Name="IVA" PropertyName="Text" Type="Decimal" />
+                <asp:ControlParameter ControlID="txttotal" Name="Total" PropertyName="Text" Type="Decimal" />
+                <asp:ControlParameter ControlID="txtproverfc" Name="Proveedores_RFC" PropertyName="Text" Type="String" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+    </form>
+</body>
+</html>
+
+
+<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="InsertarInventario.aspx.vb" Inherits="Interfaz_BD_Tienda.IngresarInventario" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            font-family: "Segoe UI Variable Display Semib";
+            color: #000000;
+        }
+        .auto-style2 {
+            font-family: "Segoe UI Variable Display Semib";
+            color: #FF9900;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="auto-style2">
+            INGRESAR UN PRODUCTOS AL INVENTARIO.
+        </div>
+        <p>
+            <span class="auto-style1">ID Inventario:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+            <asp:TextBox ID="txtidInve" runat="server" CssClass="auto-style1"></asp:TextBox>
+        </p>
+        <p>
+            <span class="auto-style1">Codigo del Producto del inventario:
+            </span>
+            <asp:TextBox ID="txtcodProd" runat="server" CssClass="auto-style1"></asp:TextBox>
+        </p>
+        <p>
+            <span class="auto-style1">Empaque:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+            <asp:TextBox ID="txtempa" runat="server" CssClass="auto-style1"></asp:TextBox>
+        </p>
+        <p>
+            <span class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Caducidad&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+            <asp:Calendar ID="calendarcad" runat="server" style="font-family: 'Segoe UI Variable Display Semib'"></asp:Calendar>
+        </p>
+        <p>
+            &nbsp;</p>
+        <p>
+            <span class="auto-style1">Observaciones:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+            <asp:TextBox ID="txtobser" runat="server" CssClass="auto-style1"></asp:TextBox>
+        </p>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Button ID="Button1" runat="server" Text="Guardar" BackColor="#FF9900" CssClass="auto-style1" ForeColor="White" />
+        <br />
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="IdInventario" DataSourceID="SqlDataTiendaAba" CssClass="auto-style1">
+            <Columns>
+                <asp:BoundField DataField="IdInventario" HeaderText="IdInventario" ReadOnly="True" SortExpression="IdInventario" />
+                <asp:BoundField DataField="CodProdInvent" HeaderText="CodProdInvent" SortExpression="CodProdInvent" />
+                <asp:BoundField DataField="Empaque" HeaderText="Empaque" SortExpression="Empaque" />
+                <asp:BoundField DataField="Caducidad" HeaderText="Caducidad" SortExpression="Caducidad" />
+                <asp:BoundField DataField="Observaciones" HeaderText="Observaciones" SortExpression="Observaciones" />
+            </Columns>
+        </asp:GridView>
+        <asp:SqlDataSource ID="SqlDataTiendaAba" runat="server" ConnectionString="<%$ ConnectionStrings:abarrotesConnectionString3 %>" SelectCommand="InsertarInventario" SelectCommandType="StoredProcedure">
+            <SelectParameters>
+                <asp:ControlParameter ControlID="txtidInve" Name="IdInventario" PropertyName="Text" Type="Int32" />
+                <asp:ControlParameter ControlID="txtcodProd" Name="CodProdInvent" PropertyName="Text" Type="Int32" />
+                <asp:ControlParameter ControlID="txtempa" Name="Empaque" PropertyName="Text" Type="String" />
+                <asp:ControlParameter ControlID="calendarcad" Name="Caducidad" PropertyName="SelectedDate" Type="String" />
+                <asp:ControlParameter ControlID="txtobser" Name="Observaciones" PropertyName="Text" Type="String" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+    </form>
+</body>
+</html>
+
+
+<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="InsertarPersonal.aspx.vb" Inherits="Interfaz_BD_Tienda.InsertarPersonal" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            font-family: "Segoe UI Variable Display Semib";
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <p style="color: #FF9900; font-family: 'Segoe UI Variable Display Semib'">
+            AGREGAR A UN NUEVO PERSONAL DE LA TIENDA</p>
+        <p>
+            <span class="auto-style1">Numero de SS:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span> <asp:TextBox ID="numSS" runat="server" CssClass="auto-style1"></asp:TextBox>
+        </p>
+        <p>
+            <span class="auto-style1">Nombre:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <asp:TextBox ID="txtnom" runat="server" CssClass="auto-style1"></asp:TextBox>
+        </p>
+        <p>
+            <span class="auto-style1">Apellido Paterno:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <asp:TextBox ID="txtapePa" runat="server" CssClass="auto-style1"></asp:TextBox>
+        </p>
+        <p>
+            <span class="auto-style1">Apellido Materno:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <asp:TextBox ID="txtMa" runat="server" CssClass="auto-style1"></asp:TextBox>
+        </p>
+        <p>
+            <span class="auto-style1">Telefono celular:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <asp:TextBox ID="txtcel" runat="server" CssClass="auto-style1"></asp:TextBox>
+        </p>
+        <p>
+            <span class="auto-style1">Telefono casa:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <asp:TextBox ID="txtelCasa" runat="server" CssClass="auto-style1"></asp:TextBox>
+        </p>
+        <p>
+            &nbsp;</p>
+        <p>
+            <span class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Fecha de contrato</span>
+            <asp:Calendar ID="calfechaCon" runat="server" style="font-family: 'Segoe UI Variable Display Semib'"></asp:Calendar>
+        </p>
+        <p>
+            &nbsp;</p>
+        <p>
+            <span class="auto-style1">Frecuencia de pago:&nbsp;&nbsp; </span> <asp:TextBox ID="txtfrePago" runat="server" CssClass="auto-style1"></asp:TextBox>
+        </p>
+        <p>
+            <span class="auto-style1">Sueldo Base:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <asp:TextBox ID="txtsueBa" runat="server" CssClass="auto-style1"></asp:TextBox>
+        </p>
+        <p style="margin-left: 120px">
+            <asp:Button ID="Button1" runat="server" Text="Guardar" BackColor="#FF9900" CssClass="auto-style1" ForeColor="White" />
+        </p>
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="NumSS" DataSourceID="SqlDataTiendaAba" style="font-family: 'Segoe UI Variable Display Semib'">
+            <Columns>
+                <asp:BoundField DataField="NumSS" HeaderText="NumSS" ReadOnly="True" SortExpression="NumSS" />
+                <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
+                <asp:BoundField DataField="ApePaterno" HeaderText="ApePaterno" SortExpression="ApePaterno" />
+                <asp:BoundField DataField="ApeMaterno" HeaderText="ApeMaterno" SortExpression="ApeMaterno" />
+                <asp:BoundField DataField="TelPersonal" HeaderText="TelPersonal" SortExpression="TelPersonal" />
+                <asp:BoundField DataField="TelCasa" HeaderText="TelCasa" SortExpression="TelCasa" />
+                <asp:BoundField DataField="FechaContrato" HeaderText="FechaContrato" SortExpression="FechaContrato" />
+                <asp:BoundField DataField="FecuenciaPago" HeaderText="FecuenciaPago" SortExpression="FecuenciaPago" />
+                <asp:BoundField DataField="SueldoBase" HeaderText="SueldoBase" SortExpression="SueldoBase" />
+            </Columns>
+        </asp:GridView>
+        <asp:SqlDataSource ID="SqlDataTiendaAba" runat="server" ConnectionString="<%$ ConnectionStrings:abarrotesConnectionString3 %>" SelectCommand="InsertarPersonal" SelectCommandType="StoredProcedure">
+            <SelectParameters>
+                <asp:ControlParameter ControlID="numSS" Name="NumSS" PropertyName="Text" Type="Int32" />
+                <asp:ControlParameter ControlID="txtnom" Name="Nombre" PropertyName="Text" Type="String" />
+                <asp:ControlParameter ControlID="txtapePa" Name="ApePaterno" PropertyName="Text" Type="String" />
+                <asp:ControlParameter ControlID="txtMa" Name="ApeMaterno" PropertyName="Text" Type="String" />
+                <asp:ControlParameter ControlID="txtcel" Name="TelPersonal" PropertyName="Text" Type="String" />
+                <asp:ControlParameter ControlID="txtelCasa" Name="TelCasa" PropertyName="Text" Type="String" />
+                <asp:ControlParameter ControlID="calfechaCon" Name="FechaContrato" PropertyName="SelectedDate" Type="String" />
+                <asp:ControlParameter ControlID="txtfrePago" Name="FecuenciaPago" PropertyName="Text" Type="String" />
+                <asp:ControlParameter ControlID="txtsueBa" Name="SueldoBase" PropertyName="Text" Type="Decimal" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+    </form>
+</body>
+</html>
+
+
+<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="InsertarProductos.aspx.vb" Inherits="Interfaz_BD_Tienda.Productos" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            font-family: "Segoe UI Variable Display Semib";
+        }
+        .auto-style2 {
+            font-family: "Segoe UI Variable Display Semib";
+            color: #FF9900;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="auto-style2">
+            AGREGAR NUEVO PRODUCTO.
+        </div>
+        <p>
+            <span class="auto-style1">Codigo del producto:
+            </span>
+            <asp:TextBox ID="txtCodProd" runat="server" CssClass="auto-style1"></asp:TextBox>
+        </p>
+        <p>
+            <span class="auto-style1">Descripcion:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+            <asp:TextBox ID="txtdesc" runat="server" CssClass="auto-style1"></asp:TextBox>
+        </p>
+        <p>
+            <span class="auto-style1">Precio de venta:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+            <asp:TextBox ID="txtprev" runat="server" CssClass="auto-style1"></asp:TextBox>
+        </p>
+        <p>
+            <span class="auto-style1">Existencias:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+            <asp:TextBox ID="txtexi" runat="server" CssClass="auto-style1"></asp:TextBox>
+        </p>
+        <p>
+            <span class="auto-style1">Stock min:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+            <asp:TextBox ID="txtstomin" runat="server" CssClass="auto-style1"></asp:TextBox>
+        </p>
+        <p>
+            <span class="auto-style1">Stock max:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+            <asp:TextBox ID="txtstomax" runat="server" CssClass="auto-style1"></asp:TextBox>
+        </p>
+        <p>
+            <span class="auto-style1">Oferta:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+            <asp:TextBox ID="txtofe" runat="server" CssClass="auto-style1"></asp:TextBox>
+        </p>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Button ID="Button1" runat="server" Text="Guardar" BackColor="#FF9900" CssClass="auto-style1" ForeColor="White" />
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="CodProd" DataSourceID="SqlDataTiendaAba" CssClass="auto-style1">
+            <Columns>
+                <asp:BoundField DataField="CodProd" HeaderText="CodProd" ReadOnly="True" SortExpression="CodProd" />
+                <asp:BoundField DataField="Descrip" HeaderText="Descrip" SortExpression="Descrip" />
+                <asp:BoundField DataField="PrecioV" HeaderText="PrecioV" SortExpression="PrecioV" />
+                <asp:BoundField DataField="Existencias" HeaderText="Existencias" SortExpression="Existencias" />
+                <asp:BoundField DataField="StockMin" HeaderText="StockMin" SortExpression="StockMin" />
+                <asp:BoundField DataField="StockMax" HeaderText="StockMax" SortExpression="StockMax" />
+                <asp:BoundField DataField="Oferta" HeaderText="Oferta" SortExpression="Oferta" />
+            </Columns>
+        </asp:GridView>
+        <asp:SqlDataSource ID="SqlDataTiendaAba" runat="server" ConnectionString="<%$ ConnectionStrings:abarrotesConnectionString3 %>" SelectCommand="InsertarProducto" SelectCommandType="StoredProcedure">
+            <SelectParameters>
+                <asp:ControlParameter ControlID="txtCodProd" Name="CodProd" PropertyName="Text" Type="Int32" />
+                <asp:ControlParameter ControlID="txtdesc" Name="Descrip" PropertyName="Text" Type="String" />
+                <asp:ControlParameter ControlID="txtprev" Name="PrecioV" PropertyName="Text" Type="Decimal" />
+                <asp:ControlParameter ControlID="txtexi" Name="Existencias" PropertyName="Text" Type="Int32" />
+                <asp:ControlParameter ControlID="txtstomin" Name="StockMin" PropertyName="Text" Type="Int32" />
+                <asp:ControlParameter ControlID="txtstomax" Name="StockMax" PropertyName="Text" Type="Int32" />
+                <asp:ControlParameter ControlID="txtofe" Name="Oferta" PropertyName="Text" Type="String" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+    </form>
+</body>
+</html>
+
+
+<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="InsertarProductosVentas.aspx.vb" Inherits="Interfaz_BD_Tienda.ProductosVentas" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            font-family: "Segoe UI Variable Display Semib";
+        }
+        .auto-style2 {
+            font-family: "Segoe UI Variable Display Semib";
+            color: #FF9900;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="auto-style2">
+            AGREGAR UN PRODUCTO DE VENTA.</div>
+        <p>
+            <span class="auto-style1">Cantidad:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+            <asp:TextBox ID="txtcant" runat="server" CssClass="auto-style1"></asp:TextBox>
+        </p>
+        <p>
+            <span class="auto-style1">Precio Venta:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <asp:TextBox ID="txtpreV" runat="server" CssClass="auto-style1"></asp:TextBox>
+        </p>
+        <p>
+            <span class="auto-style1">Subtotal:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <asp:TextBox ID="txtsub" runat="server" CssClass="auto-style1"></asp:TextBox>
+        </p>
+        <p>
+            <span class="auto-style1"># Ventas:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+            <asp:TextBox ID="txtnumV" runat="server" CssClass="auto-style1"></asp:TextBox>
+        </p>
+        <p>
+            <span class="auto-style1">Codigo de producto:&nbsp;&nbsp; </span>
+            <asp:TextBox ID="txtcodProd" runat="server" CssClass="auto-style1"></asp:TextBox>
+        </p>
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="Button1" runat="server" Text="Guardar" BackColor="#FF9900" CssClass="auto-style1" ForeColor="White" />
+        </p>
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Ventas_NumV,Productos_CodProd" DataSourceID="SqlDataTiendaAba" CssClass="auto-style1">
+            <Columns>
+                <asp:BoundField DataField="Cantidad" HeaderText="Cantidad" SortExpression="Cantidad" />
+                <asp:BoundField DataField="PrecioV" HeaderText="PrecioV" SortExpression="PrecioV" />
+                <asp:BoundField DataField="Subtotal_Prod" HeaderText="Subtotal_Prod" SortExpression="Subtotal_Prod" />
+                <asp:BoundField DataField="Ventas_NumV" HeaderText="Ventas_NumV" ReadOnly="True" SortExpression="Ventas_NumV" />
+                <asp:BoundField DataField="Productos_CodProd" HeaderText="Productos_CodProd" ReadOnly="True" SortExpression="Productos_CodProd" />
+            </Columns>
+        </asp:GridView>
+        <asp:SqlDataSource ID="SqlDataTiendaAba" runat="server" ConnectionString="<%$ ConnectionStrings:abarrotesConnectionString3 %>" SelectCommand="InsertarProductoVenta" SelectCommandType="StoredProcedure">
+            <SelectParameters>
+                <asp:ControlParameter ControlID="txtcant" Name="Cantidad" PropertyName="Text" Type="Int32" />
+                <asp:ControlParameter ControlID="txtpreV" Name="PrecioV" PropertyName="Text" Type="Decimal" />
+                <asp:ControlParameter ControlID="txtsub" Name="Subtotal_Prod" PropertyName="Text" Type="Decimal" />
+                <asp:ControlParameter ControlID="txtnumV" Name="Ventas_NumV" PropertyName="Text" Type="Int32" />
+                <asp:ControlParameter ControlID="txtcodProd" Name="Productos_CodProd" PropertyName="Text" Type="Int32" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+    </form>
+</body>
+</html>
+
+
+<%@ Page Language="C#" %>
+
+<!DOCTYPE html>
+<script runat="server">
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+    }
+    protected void Button1_Click(object sender, EventArgs e)
+        {
+
+        }
+</script>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta charset="utf-8" />
+    <title></title>    
+    <style type="text/css">
+        .auto-style1 {
+            font-family: "Segoe UI Variable Display Semib";
+        }
+        .auto-style2 {
+            font-family: "Segoe UI Variable Display Semib";
+            color: #FF9900;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">   
+        <span class="auto-style2">ACTUALIZAR DATOS DE VENTAS</span><br class="auto-style1" />
+        <br class="auto-style1" />
+        <span class="auto-style1">Número de venta:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; </span> <asp:DropDownList ID="DropDownList1" runat="server" DataValueField="NumV" AutoPostBack="True" DataSourceID="VerNumVenta" DataTextField="NumV" CssClass="auto-style1">
+        </asp:DropDownList>
+        <asp:SqlDataSource ID="VerNumVenta" runat="server" ConnectionString="<%$ ConnectionStrings:abarrotesConnectionString %>" SelectCommand="SELECT [NumV] FROM [Ventas]"></asp:SqlDataSource>
+        <br class="auto-style1" />
+        <br class="auto-style1" />
+        <span class="auto-style1">Fecha:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </span>
+        <br class="auto-style1" />
+        <br class="auto-style1" />
+        <span class="auto-style1">Subtotal&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+        </span>
+        <asp:TextBox ID="Subtotal" runat="server" CssClass="auto-style1"></asp:TextBox>
+        <br class="auto-style1" />
+        <br class="auto-style1" />
+        <span class="auto-style1">IVA:&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+        </span>
+        <asp:TextBox ID="IVA" runat="server" CssClass="auto-style1"></asp:TextBox>
+        <br class="auto-style1" />
+        <br class="auto-style1" />
+        <span class="auto-style1">Total:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+        </span>
+        <asp:TextBox ID="Total" runat="server" CssClass="auto-style1"></asp:TextBox>
+        <br class="auto-style1" />
+        <br class="auto-style1" />
+        <span class="auto-style1">RFC del Cliente:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span><asp:DropDownList ID="DropDownList3" runat="server" DataSourceID="VerClientes" DataTextField="RFC" DataValueField="RFC" CssClass="auto-style1">
+        </asp:DropDownList>
+        <asp:SqlDataSource ID="VerClientes" runat="server" ConnectionString="<%$ ConnectionStrings:abarrotesConnectionString %>" SelectCommand="SELECT [RFC] FROM [Clientes]"></asp:SqlDataSource>
+        <br class="auto-style1" />
+        <span class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+        </span>
+        <br class="auto-style1" />
+        <span class="auto-style1">NSS del Personal:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="VerPersonal" DataTextField="NumSS" DataValueField="NumSS" CssClass="auto-style1">
+        </asp:DropDownList>
+        <asp:SqlDataSource ID="VerPersonal" runat="server" ConnectionString="<%$ ConnectionStrings:abarrotesConnectionString %>" SelectCommand="SELECT [NumSS] FROM [Personal]"></asp:SqlDataSource>
+        <span class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+        </span>
+        <br class="auto-style1" />
+        <br class="auto-style1" />
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Actualizar Venta" CssClass="auto-style1" style="color: #FFFFFF; background-color: #FF9900" />
+        <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="NumV" DataSourceID="ActualizarVentas">
+            <Columns>
+                <asp:BoundField DataField="NumV" HeaderText="NumV" ReadOnly="True" SortExpression="NumV" />
+                <asp:BoundField DataField="Fecha" HeaderText="Fecha" SortExpression="Fecha" />
+                <asp:BoundField DataField="Subtotal" HeaderText="Subtotal" SortExpression="Subtotal" />
+                <asp:BoundField DataField="IVA" HeaderText="IVA" SortExpression="IVA" />
+                <asp:BoundField DataField="Total" HeaderText="Total" SortExpression="Total" />
+                <asp:BoundField DataField="Clientes_RFC" HeaderText="Clientes_RFC" SortExpression="Clientes_RFC" />
+                <asp:BoundField DataField="Personal_NumSS" HeaderText="Personal_NumSS" SortExpression="Personal_NumSS" />
+            </Columns>
+        </asp:GridView>
+        <asp:SqlDataSource ID="ActualizarVentas" runat="server" ConnectionString="<%$ ConnectionStrings:abarrotesConnectionString %>" SelectCommand="ActualizarVenta" SelectCommandType="StoredProcedure">
+            <SelectParameters>
+                <asp:ControlParameter ControlID="DropDownList1" Name="NumV" PropertyName="SelectedValue" Type="Int32" />
+                <asp:ControlParameter ControlID="Calendar1" Name="Fecha" PropertyName="SelectedDate" Type="String" />
+                <asp:ControlParameter ControlID="Subtotal" Name="Subtotal" PropertyName="Text" Type="Decimal" />
+                <asp:ControlParameter ControlID="IVA" Name="IVA" PropertyName="Text" Type="Decimal" />
+                <asp:ControlParameter ControlID="Total" Name="Total" PropertyName="Text" Type="Decimal" />
+                <asp:ControlParameter ControlID="DropDownList3" Name="Clientes_RFC" PropertyName="SelectedValue" Type="String" />
+                <asp:ControlParameter ControlID="DropDownList2" Name="Personal_NumSS" PropertyName="SelectedValue" Type="Int32" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+    </form>
+</body>
+</html>
+
+
+<%@ Page Language="C#" %>
+
+<!DOCTYPE html>
+<script runat="server">
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+    }
+    protected void Button1_Click(object sender, EventArgs e)
+        {
+
+        }
+</script>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta charset="utf-8" />
+    <title></title>    
+    <style type="text/css">
+        .auto-style1 {
+            font-family: "Segoe UI Variable Display Semib";
+        }
+        .auto-style2 {
+            font-family: "Segoe UI Variable Display Semib";
+            color: #FF9900;
+        }
+    </style>
+</head>
+<body>
+        <span class="auto-style2">MODIFICAR DATOS DE LOS PROVEEDORES</span><br class="auto-style1" />
+        <br class="auto-style1" />
+    <form id="form1" runat="server">   
+        <span class="auto-style1">RFC:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span> <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="VerProveedores" DataTextField="RFC" DataValueField="RFC" AutoPostBack="True" CssClass="auto-style1">
+        </asp:DropDownList>
+        <asp:SqlDataSource ID="VerProveedores" runat="server" ConnectionString="<%$ ConnectionStrings:abarrotesConnectionString %>" SelectCommand="SELECT [RFC] FROM [Proveedores]"></asp:SqlDataSource>
+        <br class="auto-style1" />
+        <br class="auto-style1" />
+        <span class="auto-style1">Nombre de la Empresa:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; </span> <asp:TextBox ID="TextBox10" runat="server" CssClass="auto-style1"></asp:TextBox>
+        <br class="auto-style1" />
+        <br class="auto-style1" />
+        <span class="auto-style1">Nombre del Representante:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; </span>
+        <asp:TextBox ID="TextBox2" runat="server" CssClass="auto-style1"></asp:TextBox>
+        <br class="auto-style1" />
+        <br class="auto-style1" />
+        <span class="auto-style1">Apellido Paterno del Representante:&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+        </span>
+        <asp:TextBox ID="TextBox3" runat="server" CssClass="auto-style1"></asp:TextBox>
+        <br class="auto-style1" />
+        <br class="auto-style1" />
+        <span class="auto-style1">Teléfono de contacto:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; </span>
+        <asp:TextBox ID="TextBox4" runat="server" CssClass="auto-style1"></asp:TextBox>
+        <br class="auto-style1" />
+        <br class="auto-style1" />
+        <span class="auto-style1">Día de pedido:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+        </span>
+        <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
+        <br class="auto-style1" />
+        <span class="auto-style1">Día de entrega:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Calendar ID="Calendar2" runat="server"></asp:Calendar>
+&nbsp; &nbsp;
+        </span>
+        <br class="auto-style1" />
+        <span class="auto-style1">Tipo de Pago:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span><asp:TextBox ID="TextBox7" runat="server" CssClass="auto-style1"></asp:TextBox>
+        <span class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+        </span>
+        <br class="auto-style1" />
+        <br class="auto-style1" />
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Actualizar Proveedores" CssClass="auto-style1" style="color: #FFFFFF; background-color: #FF9900" />
+        <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="RFC" DataSourceID="ActualizarProveedores">
+            <Columns>
+                <asp:BoundField DataField="RFC" HeaderText="RFC" ReadOnly="True" SortExpression="RFC" />
+                <asp:BoundField DataField="NomEmpresa" HeaderText="NomEmpresa" SortExpression="NomEmpresa" />
+                <asp:BoundField DataField="NombreRepresentante" HeaderText="NombreRepresentante" SortExpression="NombreRepresentante" />
+                <asp:BoundField DataField="ApeP_Representante" HeaderText="ApeP_Representante" SortExpression="ApeP_Representante" />
+                <asp:BoundField DataField="TelContacto" HeaderText="TelContacto" SortExpression="TelContacto" />
+                <asp:BoundField DataField="DiaPedido" HeaderText="DiaPedido" SortExpression="DiaPedido" />
+                <asp:BoundField DataField="DiaEntrega" HeaderText="DiaEntrega" SortExpression="DiaEntrega" />
+                <asp:BoundField DataField="TipoPago" HeaderText="TipoPago" SortExpression="TipoPago" />
+            </Columns>
+        </asp:GridView>
+        <asp:SqlDataSource ID="ActualizarProveedores" runat="server" ConnectionString="<%$ ConnectionStrings:abarrotesConnectionString %>" SelectCommand="ActualizarProveedor" SelectCommandType="StoredProcedure">
+            <SelectParameters>
+                <asp:ControlParameter ControlID="DropDownList1" Name="RFC" PropertyName="SelectedValue" Type="String" />
+                <asp:ControlParameter ControlID="TextBox10" Name="NomEmpresa" PropertyName="Text" Type="String" />
+                <asp:ControlParameter ControlID="TextBox2" Name="NombreRepresentante" PropertyName="Text" Type="String" />
+                <asp:ControlParameter ControlID="TextBox3" Name="ApeP_Representante" PropertyName="Text" Type="String" />
+                <asp:ControlParameter ControlID="TextBox4" Name="TelContacto" PropertyName="Text" Type="String" />
+                <asp:ControlParameter ControlID="Calendar1" Name="DiaPedido" PropertyName="SelectedDate" Type="String" />
+                <asp:ControlParameter ControlID="Calendar2" Name="DiaEntrega" PropertyName="SelectedDate" Type="String" />
+                <asp:ControlParameter ControlID="TextBox7" Name="TipoPago" PropertyName="Text" Type="String" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+    </form>
+</body>
+</html>
+
+
+<%@ Page Language="C#" %>
+
+<!DOCTYPE html>
+<script runat="server">
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+    }
+    protected void Button1_Click(object sender, EventArgs e)
+        {
+
+        }
+</script>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta charset="utf-8" />
+    <title></title>    
+    <style type="text/css">
+        .auto-style1 {
+            font-family: "Segoe UI Variable Display Semib";
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">   
+        <span class="auto-style1">ACTUALIZAR DATOS DE VENTA DE PRODUCTO</span><br class="auto-style1" />
+        <br class="auto-style1" />
+        <span class="auto-style1">Código del Producto:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span> <asp:DropDownList ID="DropDownList1" runat="server" DataValueField="CodProd" AutoPostBack="True" DataSourceID="VerProducto" DataTextField="CodProd" CssClass="auto-style1">
+        </asp:DropDownList>
+        <asp:SqlDataSource ID="VerProducto" runat="server" ConnectionString="<%$ ConnectionStrings:abarrotesConnectionString %>" SelectCommand="SELECT [CodProd] FROM [Productos]"></asp:SqlDataSource>
+        <br class="auto-style1" />
+        <br class="auto-style1" />
+        <span class="auto-style1">Cantidad:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</span><asp:TextBox ID="Cant" runat="server" CssClass="auto-style1"></asp:TextBox>
+        <span class="auto-style1">&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </span>
+        <br class="auto-style1" />
+        <br class="auto-style1" />
+        <span class="auto-style1">Precio:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; </span>
+        <asp:TextBox ID="Precio" runat="server" CssClass="auto-style1"></asp:TextBox>
+        <br class="auto-style1" />
+        <br class="auto-style1" />
+        <span class="auto-style1">Subtotal:&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; </span>
+        <asp:TextBox ID="Sub" runat="server" CssClass="auto-style1"></asp:TextBox>
+        <br class="auto-style1" />
+        <br class="auto-style1" />
+        <span class="auto-style1">Número de venta:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;</span><asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="VerVenta" DataTextField="NumV" DataValueField="NumV" CssClass="auto-style1">
+        </asp:DropDownList>
+        <asp:SqlDataSource ID="VerVenta" runat="server" ConnectionString="<%$ ConnectionStrings:abarrotesConnectionString %>" SelectCommand="SELECT [NumV] FROM [Ventas]"></asp:SqlDataSource>
+        <span class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+        </span>
+        <br class="auto-style1" />
+        <br class="auto-style1" />
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Actualizar Venta" CssClass="auto-style1" style="color: #FFFFFF; background-color: #FF9900" />
+        <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Ventas_NumV,Productos_CodProd" DataSourceID="ActualizarProductosV">
+            <Columns>
+                <asp:BoundField DataField="Cantidad" HeaderText="Cantidad" SortExpression="Cantidad" />
+                <asp:BoundField DataField="PrecioV" HeaderText="PrecioV" SortExpression="PrecioV" />
+                <asp:BoundField DataField="Subtotal_Prod" HeaderText="Subtotal_Prod" SortExpression="Subtotal_Prod" />
+                <asp:BoundField DataField="Ventas_NumV" HeaderText="Ventas_NumV" SortExpression="Ventas_NumV" ReadOnly="True" />
+                <asp:BoundField DataField="Productos_CodProd" HeaderText="Productos_CodProd" SortExpression="Productos_CodProd" ReadOnly="True" />
+            </Columns>
+        </asp:GridView>
+        <asp:SqlDataSource ID="ActualizarProductosV" runat="server" ConnectionString="<%$ ConnectionStrings:abarrotesConnectionString %>" SelectCommand="ActualizarProductosv" SelectCommandType="StoredProcedure">
+            <SelectParameters>
+                <asp:ControlParameter ControlID="Cant" Name="Cantidad" PropertyName="Text" Type="Int32" />
+                <asp:ControlParameter ControlID="Precio" Name="PrecioV" PropertyName="Text" Type="Decimal" />
+                <asp:ControlParameter ControlID="Sub" Name="Subtotal_Prod" PropertyName="Text" Type="Decimal" />
+                <asp:ControlParameter ControlID="DropDownList2" Name="Ventas_NumV" PropertyName="SelectedValue" Type="Int32" />
+                <asp:ControlParameter ControlID="DropDownList1" Name="Productos_CodProd" PropertyName="SelectedValue" Type="Int32" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+    </form>
+</body>
+</html>
+
+
+<%@ Page Language="C#" %>
+
+<!DOCTYPE html>
+<script runat="server">
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+    }
+    protected void Button1_Click(object sender, EventArgs e)
+        {
+
+        }
+</script>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta charset="utf-8" />
+    <title></title>    
+    <style type="text/css">
+        .auto-style1 {
+            font-family: "Courier New", Courier, "espacio sencillo";
+            font-size: large;
+        }
+        .auto-style2 {
+            background-color: #FFFFFF;
+        }
+        .auto-style3 {
+            font-family: "Segoe UI Variable Display Semib";
+        }
+        .auto-style4 {
+            font-family: "Segoe UI Variable Display Semib";
+            font-size: large;
+        }
+        .auto-style5 {
+            font-family: "Segoe UI Variable Display Semib";
+            color: #FF9900;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">   
+        <span class="auto-style5">ACTUALIZAR DATOS DE PRODUCTOS</span><br />
+        <br />
+        <span class="auto-style4">Código del Producto:</span><span class="auto-style1">&nbsp; </span>&nbsp;<asp:DropDownList ID="DropDownList1" runat="server" DataValueField="CodProd" AutoPostBack="True" DataSourceID="VerProducto" DataTextField="CodProd" CssClass="auto-style2">
+        </asp:DropDownList>
+        <asp:SqlDataSource ID="VerProducto" runat="server" ConnectionString="<%$ ConnectionStrings:abarrotesConnectionString %>" SelectCommand="SELECT [CodProd] FROM [Productos]"></asp:SqlDataSource>
+        <br />
+        <br />
+        <span class="auto-style4">Descripción:</span><span class="auto-style1">&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:TextBox ID="Desc" runat="server"></asp:TextBox>
+        &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br />
+        <br />
+        <span class="auto-style4">Precio:</span><span class="auto-style1">&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:TextBox ID="Precio" runat="server"></asp:TextBox>
+        <br />
+        <br />
+        <span class="auto-style4">Existencias:</span><span class="auto-style1">&nbsp;</span>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:TextBox ID="Existencias" runat="server"></asp:TextBox>
+        <br />
+        <br />
+        <span class="auto-style4">Stock Mínimo:</span><span class="auto-style1">&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+        <asp:TextBox ID="Min" runat="server"></asp:TextBox>
+        <br />
+        <br />
+        <span class="auto-style3">Stock Máximo:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:TextBox ID="Max" runat="server"></asp:TextBox>
+        <br />
+        &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+        <br />
+        <span class="auto-style3">Oferta:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+        <br />
+        <br />
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Actualizar Producto" style="color: #FFFFFF; font-family: 'Segoe UI Variable Display Semib'; background-color: #FF9900" />
+        <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="CodProd" DataSourceID="ActualizarProductos">
+            <Columns>
+                <asp:BoundField DataField="CodProd" HeaderText="CodProd" ReadOnly="True" SortExpression="CodProd" />
+                <asp:BoundField DataField="Descrip" HeaderText="Descrip" SortExpression="Descrip" />
+                <asp:BoundField DataField="PrecioV" HeaderText="PrecioV" SortExpression="PrecioV" />
+                <asp:BoundField DataField="Existencias" HeaderText="Existencias" SortExpression="Existencias" />
+                <asp:BoundField DataField="StockMin" HeaderText="StockMin" SortExpression="StockMin" />
+                <asp:BoundField DataField="StockMax" HeaderText="StockMax" SortExpression="StockMax" />
+                <asp:BoundField DataField="Oferta" HeaderText="Oferta" SortExpression="Oferta" />
+            </Columns>
+        </asp:GridView>
+        <asp:SqlDataSource ID="ActualizarProductos" runat="server" ConnectionString="<%$ ConnectionStrings:abarrotesConnectionString %>" SelectCommand="ActualizarProducto" SelectCommandType="StoredProcedure">
+            <SelectParameters>
+                <asp:ControlParameter ControlID="DropDownList1" Name="CodProd" PropertyName="SelectedValue" Type="Int32" />
+                <asp:ControlParameter ControlID="Desc" Name="Descrip" PropertyName="Text" Type="String" />
+                <asp:ControlParameter ControlID="Precio" Name="PrecioV" PropertyName="Text" Type="Decimal" />
+                <asp:ControlParameter ControlID="Existencias" Name="Existencias" PropertyName="Text" Type="Int32" />
+                <asp:ControlParameter ControlID="Min" Name="StockMin" PropertyName="Text" Type="Int32" />
+                <asp:ControlParameter ControlID="Max" Name="StockMax" PropertyName="Text" Type="Int32" />
+                <asp:ControlParameter ControlID="TextBox1" Name="Oferta" PropertyName="Text" Type="String" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+    </form>
+</body>
+</html>
+
+<%@ Page Language="C#" %>
+
+<!DOCTYPE html>
+<script runat="server">
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+
+    }
+</script>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta charset="utf-8" />
+    <title></title>    
+    <style type="text/css">
+        .auto-style1 {
+            font-family: "Courier New", Courier, "espacio sencillo";
+            font-size: large;
+        }
+        .auto-style2 {
+            font-family: "Segoe UI Variable Display Semib";
+            color: #FF9900;
+        }
+        .auto-style3 {
+            font-family: "Segoe UI Variable Display Semib";
+        }
+        .auto-style4 {
+            font-family: "Segoe UI Variable Display Semib";
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">   
+        <span class="auto-style2">MODIFICAR DATOS DEL PERSONAL</span><br />
+        <br />
+        <span class="auto-style3">NSS:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="ActualizaPersonal" DataTextField="NumSS" DataValueField="NumSS">
+        </asp:DropDownList>
+        <asp:SqlDataSource ID="ActualizarPersonal" runat="server" ConnectionString="<%$ ConnectionStrings:abarrotesConnectionString %>" SelectCommand="ActualizarPersonal" SelectCommandType="StoredProcedure">
+            <SelectParameters>
+                <asp:ControlParameter ControlID="DropDownList1" Name="NumSS" PropertyName="SelectedValue" Type="Int32" />
+                <asp:ControlParameter ControlID="TextBox10" Name="Nombre" PropertyName="Text" Type="String" />
+                <asp:ControlParameter ControlID="TextBox2" Name="ApePaterno" PropertyName="Text" Type="String" />
+                <asp:ControlParameter ControlID="TextBox3" Name="ApeMaterno" PropertyName="Text" Type="String" />
+                <asp:ControlParameter ControlID="TextBox4" Name="TelPersonal" PropertyName="Text" Type="String" />
+                <asp:ControlParameter ControlID="TextBox5" Name="TelCasa" PropertyName="Text" Type="String" />
+                <asp:ControlParameter ControlID="Calendar1" Name="FechaContrato" PropertyName="SelectedDate" Type="String" />
+                <asp:ControlParameter ControlID="TextBox7" Name="FecuenciaPago" PropertyName="Text" Type="String" />
+                <asp:ControlParameter ControlID="TextBox8" Name="SueldoBase" PropertyName="Text" Type="Decimal" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+        <br />
+        <span class="auto-style3">Nombre:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<asp:TextBox ID="TextBox10" runat="server"></asp:TextBox>
+        <br />
+        <br />
+        <span class="auto-style3">Apellido Paterno:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+        <br />
+        <br />
+        <span class="auto-style3">Apellido Materno:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+        <br />
+        <br />
+        <span class="auto-style4">Celular:</span><span class="auto-style1">&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+        <br />
+        <br />
+        <span class="auto-style3">Teléfono:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+        <br />
+        <br />
+        <span class="auto-style3">Fecha de contrato:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
+        <br />
+        <span class="auto-style3">Frecuencia de pago:</span>&nbsp;&nbsp;&nbsp;&nbsp;<asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
+        <br />
+        <br />
+        <span class="auto-style3">Sueldo base:&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+        <asp:TextBox ID="TextBox8" runat="server"></asp:TextBox>
+        <br />
+        <br />
+        <br />
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Actualizar Personal" style="color: #FFFFFF; font-weight: 700; background-color: #FF9900" />
+        <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:SqlDataSource ID="ActualizaPersonal" runat="server" ConnectionString="<%$ ConnectionStrings:abarrotesConnectionString %>" SelectCommand="SELECT [NumSS] FROM [Personal]"></asp:SqlDataSource>
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="NumSS" DataSourceID="ActualizarPersonal">
+            <Columns>
+                <asp:BoundField DataField="NumSS" HeaderText="NumSS" ReadOnly="True" SortExpression="NumSS" />
+                <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
+                <asp:BoundField DataField="ApePaterno" HeaderText="ApePaterno" SortExpression="ApePaterno" />
+                <asp:BoundField DataField="ApeMaterno" HeaderText="ApeMaterno" SortExpression="ApeMaterno" />
+                <asp:BoundField DataField="TelPersonal" HeaderText="TelPersonal" SortExpression="TelPersonal" />
+                <asp:BoundField DataField="TelCasa" HeaderText="TelCasa" SortExpression="TelCasa" />
+                <asp:BoundField DataField="FechaContrato" HeaderText="FechaContrato" SortExpression="FechaContrato" />
+                <asp:BoundField DataField="FecuenciaPago" HeaderText="FecuenciaPago" SortExpression="FecuenciaPago" />
+                <asp:BoundField DataField="SueldoBase" HeaderText="SueldoBase" SortExpression="SueldoBase" />
+            </Columns>
+        </asp:GridView>
+        <br />
+    </form>
+</body>
+</html>
+
+
+<%@ Page Language="C#" %>
+
+<!DOCTYPE html>
+<script runat="server">
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+
+    }
+</script>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta charset="utf-8" />
+    <title></title>    
+    <style type="text/css">
+        .auto-style1 {
+            font-family: "Courier New", Courier, "espacio sencillo";
+            font-size: large;
+        }
+        .auto-style2 {
+            background-color: #FFFFFF;
+        }
+        .auto-style3 {
+            font-family: "Segoe UI Variable Display Semib";
+            color: #FF9900;
+        }
+        .auto-style4 {
+            font-family: "Segoe UI Variable Display Semib";
+        }
+        .auto-style5 {
+            font-family: "Segoe UI Variable Display Semib";
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">   
+        <span class="auto-style3">MODIFICAR DATOS DE LOS CLIENTES</span><br />
+        <br />
+        <span class="auto-style4">RFC:</span><span class="auto-style1">&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="VerClientes" DataTextField="RFC" DataValueField="RFC" AutoPostBack="True" CssClass="auto-style2">
+        </asp:DropDownList>
+        <asp:SqlDataSource ID="VerClientes" runat="server" ConnectionString="<%$ ConnectionStrings:abarrotesConnectionString %>" SelectCommand="SELECT [RFC] FROM [Clientes]"></asp:SqlDataSource>
+        <br class="auto-style4" />
+        <br class="auto-style4" />
+        <span class="auto-style4">Nombre:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:TextBox ID="TextBox10" runat="server"></asp:TextBox>
+        <br />
+        <br />
+        <span class="auto-style4">Apellido Paterno:</span><span class="auto-style1">&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+        <br />
+        <br />
+        <span class="auto-style4">Apellido Materno:</span>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+        <br />
+        <br />
+        <span class="auto-style5">Calle:</span><span class="auto-style1">&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+        <br />
+        <br />
+        <span class="auto-style4">Número:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+        <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+        <br />
+        <br />
+        <span class="auto-style4">Colonia:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+        <asp:TextBox ID="TextBox11" runat="server"></asp:TextBox>
+        <br />
+        <br />
+        <span class="auto-style4">Código Postal:</span><span class="auto-style1">&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
+        <br />
+        <br />
+        <span class="auto-style5">Alcaldía:&nbsp;</span><span class="auto-style1">&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+        <asp:TextBox ID="TextBox8" runat="server"></asp:TextBox>
+        <br />
+        <br />
+        <br />
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Actualizar Cliente" style="background-color: #FF9900; font-family: 'Segoe UI Variable Display Semib';" />
+        <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="RFC" DataSourceID="ActualizarClientes">
+            <Columns>
+                <asp:BoundField DataField="RFC" HeaderText="RFC" ReadOnly="True" SortExpression="RFC" />
+                <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
+                <asp:BoundField DataField="ApePaterno" HeaderText="ApePaterno" SortExpression="ApePaterno" />
+                <asp:BoundField DataField="ApeMaterno" HeaderText="ApeMaterno" SortExpression="ApeMaterno" />
+                <asp:BoundField DataField="Calle" HeaderText="Calle" SortExpression="Calle" />
+                <asp:BoundField DataField="Num" HeaderText="Num" SortExpression="Num" />
+                <asp:BoundField DataField="Colonia" HeaderText="Colonia" SortExpression="Colonia" />
+                <asp:BoundField DataField="CP" HeaderText="CP" SortExpression="CP" />
+                <asp:BoundField DataField="Alcaldia" HeaderText="Alcaldia" SortExpression="Alcaldia" />
+            </Columns>
+        </asp:GridView>
+        <asp:SqlDataSource ID="ActualizarClientes" runat="server" ConnectionString="<%$ ConnectionStrings:abarrotesConnectionString %>" SelectCommand="ActualizarCliente" SelectCommandType="StoredProcedure">
+            <SelectParameters>
+                <asp:ControlParameter ControlID="DropDownList1" Name="RFC" PropertyName="SelectedValue" Type="String" />
+                <asp:ControlParameter ControlID="TextBox10" Name="Nombre" PropertyName="Text" Type="String" />
+                <asp:ControlParameter ControlID="TextBox2" Name="ApePaterno" PropertyName="Text" Type="String" />
+                <asp:ControlParameter ControlID="TextBox3" Name="ApeMaterno" PropertyName="Text" Type="String" />
+                <asp:ControlParameter ControlID="TextBox4" Name="Calle" PropertyName="Text" Type="String" />
+                <asp:ControlParameter ControlID="TextBox5" Name="Num" PropertyName="Text" Type="Int32" />
+                <asp:ControlParameter ControlID="TextBox11" Name="Colonia" PropertyName="Text" Type="String" />
+                <asp:ControlParameter ControlID="TextBox7" Name="CP" PropertyName="Text" Type="Int32" />
+                <asp:ControlParameter ControlID="TextBox8" Name="Alcaldia" PropertyName="Text" Type="String" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+    </form>
+</body>
+</html>
+
+
+<%@ Page Language="C#" %>
+
+<!DOCTYPE html>
+<script runat="server">
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+    }
+    protected void Button1_Click(object sender, EventArgs e)
+        {
+
+        }
+</script>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta charset="utf-8" />
+    <title></title>    
+    <style type="text/css">
+        .auto-style1 {
+            background-color: #99CCFF;
+        }
+        .auto-style2 {
+            font-family: "Courier New", Courier, "espacio sencillo";
+            font-size: large;
+        }
+        .auto-style3 {
+            font-family: "Segoe UI Variable Display Semib";
+            color: #FF9900;
+        }
+        .auto-style4 {
+            font-family: "Segoe UI Variable Display Semib";
+            font-size: large;
+        }
+        .auto-style5 {
+            font-family: "Segoe UI Variable Display Semib";
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">   
+        <span class="auto-style3">ACTUALIZAR DATOS DE COMPRAS</span><br />
+        <br />
+        <span class="auto-style4">Número de Compra:</span><span class="auto-style2">&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:DropDownList ID="DropDownList1" runat="server" DataValueField="NumC" AutoPostBack="True" DataSourceID="VerCompra" DataTextField="NumC" CssClass="auto-style1" BackColor="White">
+        </asp:DropDownList>
+        <asp:SqlDataSource ID="VerCompra" runat="server" ConnectionString="<%$ ConnectionStrings:abarrotesConnectionString %>" SelectCommand="SELECT [NumC] FROM [Compras]"></asp:SqlDataSource>
+        <br />
+        <br />
+        <span class="auto-style4">Tipo de pago:</span><span class="auto-style2">&nbsp;</span>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:TextBox ID="Tipo" runat="server" CssClass="auto-style1" BackColor="White"></asp:TextBox>
+        &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br />
+        <br />
+        <span class="auto-style4">Subtotal:</span><span class="auto-style2">&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:TextBox ID="Sub" runat="server" Height="22px" Width="128px" CssClass="auto-style1" BackColor="White"></asp:TextBox>
+        <br />
+        <br />
+        <span class="auto-style5">IVA:</span>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:TextBox ID="IVA" runat="server" CssClass="auto-style1" BackColor="White"></asp:TextBox>
+        <br />
+        <br />
+        <span class="auto-style4">Total:</span><span class="auto-style2">&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:TextBox ID="Total" runat="server" CssClass="auto-style1" BackColor="White"></asp:TextBox>
+        <br />
+        <br />
+        <span class="auto-style5">RFC del Proveedor:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;<asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="VerProveedor" DataTextField="RFC" DataValueField="RFC" CssClass="auto-style1" BackColor="White">
+        </asp:DropDownList>
+        <asp:SqlDataSource ID="VerProveedor" runat="server" ConnectionString="<%$ ConnectionStrings:abarrotesConnectionString %>" SelectCommand="SELECT [RFC] FROM [Proveedores]"></asp:SqlDataSource>
+        &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+        <br />
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Actualizar Compra" style="background-color: #FF9900; font-family: 'Segoe UI Variable Display Semib';" ForeColor="White" />
+        <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="NumC" DataSourceID="ACtualizarCompra">
+            <Columns>
+                <asp:BoundField DataField="NumC" HeaderText="NumC" SortExpression="NumC" ReadOnly="True" />
+                <asp:BoundField DataField="TipoPago" HeaderText="TipoPago" SortExpression="TipoPago" />
+                <asp:BoundField DataField="Subtotal" HeaderText="Subtotal" SortExpression="Subtotal" />
+                <asp:BoundField DataField="IVA" HeaderText="IVA" SortExpression="IVA" />
+                <asp:BoundField DataField="Total" HeaderText="Total" SortExpression="Total" />
+                <asp:BoundField DataField="Proveedores_RFC" HeaderText="Proveedores_RFC" SortExpression="Proveedores_RFC" />
+            </Columns>
+        </asp:GridView>
+        <asp:SqlDataSource ID="ACtualizarCompra" runat="server" ConnectionString="<%$ ConnectionStrings:abarrotesConnectionString %>" SelectCommand="ActualizarCompras" SelectCommandType="StoredProcedure">
+            <SelectParameters>
+                <asp:ControlParameter ControlID="DropDownList1" Name="NumC" PropertyName="SelectedValue" Type="Int32" />
+                <asp:ControlParameter ControlID="Tipo" Name="TipoPago" PropertyName="Text" Type="String" />
+                <asp:ControlParameter ControlID="Sub" Name="Subtotal" PropertyName="Text" Type="Decimal" />
+                <asp:ControlParameter ControlID="IVA" Name="IVA" PropertyName="Text" Type="Decimal" />
+                <asp:ControlParameter ControlID="Total" Name="Total" PropertyName="Text" Type="Decimal" />
+                <asp:ControlParameter ControlID="DropDownList2" Name="Proveedores_RFC" PropertyName="SelectedValue" Type="String" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+    </form>
+</body>
+</html>
+
+
+<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="WebFormBorrarClientes.aspx.vb" Inherits="ProcedimientoBorrarClientes.WebFormBorrarClientes" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            text-align: justify;
+            font-family: "Segoe UI Variable Display Semib";
+            font-size: large;
+            color: #FF9900;
+        }
+        .auto-style2 {
+            text-align: justify;
+            font-family: "Segoe UI Variable Display Semib";
+            font-size: medium;
+        }
+        .auto-style3 {
+            font-family: "Segoe UI Variable Display Semib";
+            font-size: medium;
+        }
+        .auto-style4 {
+            font-family: "Segoe UI Variable Display Semib";
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="auto-style1">
+            <strong>BORRAR CLIENTE</strong></div>
+        <p class="auto-style2">
+            Para borrar un cliente se debe ingresar el nombre.</p>
+        <p>
+            <span class="auto-style3"><strong>Nombre&nbsp;&nbsp; </strong></span><span class="auto-style4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <asp:TextBox ID="txtRFC" runat="server" CssClass="auto-style4"></asp:TextBox>
+        </p>
+        <p>
+            <span class="auto-style3"><strong>Apellido paterno&nbsp;&nbsp; </strong></span><span class="auto-style4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <asp:TextBox ID="txtApePaterno" runat="server" CssClass="auto-style4"></asp:TextBox>
+        </p>
+        <p>
+            <span class="auto-style3"><strong>Apellido materno&nbsp;&nbsp; </strong></span><span class="auto-style4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <asp:TextBox ID="txtApeMaterno" runat="server" CssClass="auto-style4"></asp:TextBox>
+        </p>
+        <span class="auto-style4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </span>
+        <asp:Button ID="BorrarCliente" runat="server" BackColor="#FF9900" style="font-weight: 700" Text="Borrar Cliente" CssClass="auto-style4" ForeColor="White" />
+    </form>
+</body>
+</html>
+
+
+<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="WebFormBorrarCompras.aspx.vb" Inherits="ProcedimientoBorrarCompras.WebFormBorrarCompras" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: large;
+            color: #0000FF;
+        }
+        .auto-style2 {
+            font-family: "Segoe UI Variable Display Semib";
+            font-size: medium;
+        }
+        .auto-style3 {
+            font-family: "Segoe UI Variable Display Semib";
+            font-weight: bold;
+            font-size: medium;
+        }
+        .auto-style4 {
+            font-family: "Segoe UI Variable Display Semib";
+        }
+        .auto-style5 {
+            color: #FF9900;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="auto-style1">
+            <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="auto-style4">&nbsp;&nbsp;&nbsp;<span class="auto-style5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BORRAR COMPRAS</span></span></strong></div>
+        <p class="auto-style2">
+            Para borrar una compra debes de escribir el número de compra.</p>
+        <p>
+            <span class="auto-style3">Número de compra (NumC):</span><span class="auto-style4">&nbsp;&nbsp;&nbsp;
+            </span>
+            <asp:TextBox ID="txtNumC" runat="server" CssClass="auto-style4"></asp:TextBox>
+        </p>
+        <p>
+            <span class="auto-style4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <asp:Button ID="txtBorrarCompra" runat="server" BackColor="#FF9900" Font-Bold="True" Text="Borrar Compra" CssClass="auto-style4" ForeColor="White" />
+        </p>
+    </form>
+</body>
+</html>
+
+
+<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="WebFormBorrarInventario.aspx.vb" Inherits="ProcedimientoBorrarInventario.WebFormBorrarInventario" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: large;
+            color: #008000;
+        }
+        .auto-style3 {
+            font-family: "Segoe UI Variable Display Semib";
+            font-size: medium;
+        }
+        .auto-style4 {
+            font-family: "Segoe UI Variable Display Semib";
+            color: #FF9900;
+        }
+        .auto-style5 {
+            font-family: "Segoe UI Variable Display Semib";
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="auto-style1">
+            <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="auto-style4">BORRAR INVENTARIO</span></strong></div>
+        <p class="auto-style3">
+            Para borrar el inventario ingrese el ID de inventario.</p>
+        <p>
+            <span class="auto-style3">ID Inventario:&nbsp; </span><span class="auto-style5">&nbsp;&nbsp;
+            </span>
+            <asp:TextBox ID="txtIdInventario" runat="server" CssClass="auto-style5"></asp:TextBox>
+        </p>
+        <p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="BorrarInventario" runat="server" BackColor="#FF9900" style="font-weight: 700; font-family: Arial, Helvetica, sans-serif" Text="Borrar inventario" ForeColor="White" />
+        </p>
+    </form>
+</body>
+</html>
+
+
+<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="WebFormBorrarPersonal.aspx.vb" Inherits="ProcedimientoBorrarPersonal.WebFormBorrarPersonal" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: large;
+            color: #FF9900;
+            font-weight: bold;
+        }
+        .auto-style2 {
+            font-family: "Segoe UI Variable Display Semib";
+            font-size: small;
+        }
+        .auto-style4 {
+            font-family: "Segoe UI Variable Display Semib";
+        }
+        .auto-style5 {
+            font-family: "Segoe UI Variable Display Semib";
+            font-weight: normal;
+        }
+        .auto-style6 {
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="auto-style1">
+            <span class="auto-style6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="auto-style5">&nbsp;&nbsp;&nbsp; BORRAR PERSONAL</span></div>
+        <p class="auto-style2">
+            Para realizar la operación de borrar un miembro del personal ingresa el número de seguro social (NSS).</p>
+        <p>
+            <span class="auto-style4">Número de seguro social (NSS): &nbsp;&nbsp;
+            </span>
+            <asp:TextBox ID="TextBox1" runat="server" CssClass="auto-style4"></asp:TextBox>
+        </p>
+        <p>
+            <span class="auto-style4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <asp:Button ID="BorrarPersonal" runat="server" BackColor="#FF9900" Text="Borrar Personal" CssClass="auto-style4" ForeColor="White" />
+        </p>
+    </form>
+    <p>
+        &nbsp;</p>
+</body>
+</html>
+
+
+<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="WebFormBorrarProductos.aspx.vb" Inherits="ProcedimientoBorrarProductos.WebFormBorrarProductos" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: large;
+            color: #00FF00;
+            font-weight: bold;
+        }
+        .auto-style3 {
+            font-family: "Segoe UI Variable Display Semib";
+            font-size: medium;
+        }
+        .auto-style4 {
+            font-family: "Segoe UI Variable Display Semib";
+            color: #FF9900;
+        }
+        .auto-style5 {
+            font-family: "Segoe UI Variable Display Semib";
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="auto-style1">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="auto-style4">BORRAR PRODUCTOS</span></div>
+        <p class="auto-style3">
+            Aquí se puede borrar un producto de la tienda de abarrotes, necesitas el código del producto.</p>
+        <p>
+            <span class="auto-style3">Código de producto (CodProd): </span><span class="auto-style5">&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <asp:TextBox ID="txtCodProd" runat="server" CssClass="auto-style5"></asp:TextBox>
+        </p>
+        <p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="BorrarProducto" runat="server" BackColor="#FF9900" style="font-weight: 700; font-family: 'Segoe UI Variable Display Semib';" Text="Borrar Producto" ForeColor="White" />
+        </p>
+    </form>
+</body>
+</html>
+
+<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="WebFormBorrarproductosv.aspx.vb" Inherits="ProcedimientoBorrarproductosv.WebFormBorrarproductosv" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            font-family: "Segoe UI Variable Display Semib";
+            font-size: large;
+            color: #FF9900;
+        }
+        .auto-style2 {
+            font-family: "Segoe UI Variable Display Semib";
+            font-size: medium;
+        }
+        .auto-style4 {
+            font-family: "Segoe UI Variable Display Semib";
+            color: #FF9900;
+        }
+        .auto-style5 {
+            font-family: "Segoe UI Variable Display Semib";
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="auto-style4"> </span> <span class="auto-style1">BORRAR PRODUCTOS DE VENTA</span><br />
+        </div>
+        <p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="auto-style2">Elimina un producto de venta, se necesita el número de venta y el código del producto.</span></p>
+        <p>
+            <span class="auto-style5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Número de venta (NumV):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+            <asp:TextBox ID="txtNumV" runat="server" CssClass="auto-style5"></asp:TextBox>
+        </p>
+        <p>
+            <span class="auto-style5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Código del producto (CodProd):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <asp:TextBox ID="txtCodProd" runat="server" CssClass="auto-style5"></asp:TextBox>
+        </p>
+        <p>
+            &nbsp;</p>
+        <p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="BorrarProductoV" runat="server" BackColor="#FF9900" style="font-weight: 700" Text="Borrar Producto de venta" ForeColor="White" />
+        </p>
+        <p>
+            &nbsp;</p>
+    </form>
+    <p>
+        &nbsp;</p>
+</body>
+</html>
+
+
+<%@ Page Language="C#" %>
+
+<!DOCTYPE html>
+<script runat="server">
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+    }
+    protected void Button1_Click(object sender, EventArgs e)
+        {
+
+        }
+</script>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta charset="utf-8" />
+    <title></title>    
+    <style type="text/css">
+        .auto-style1 {
+            font-family: "Segoe UI Variable Display Semib";
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">   
+        <span class="auto-style1">ACTUALIZAR DATOS DE VENTA DE PRODUCTO</span><br class="auto-style1" />
+        <br class="auto-style1" />
+        <span class="auto-style1">Código del Producto:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span> <asp:DropDownList ID="DropDownList1" runat="server" DataValueField="CodProd" AutoPostBack="True" DataSourceID="VerProducto" DataTextField="CodProd" CssClass="auto-style1">
+        </asp:DropDownList>
+        <asp:SqlDataSource ID="VerProducto" runat="server" ConnectionString="<%$ ConnectionStrings:abarrotesConnectionString %>" SelectCommand="SELECT [CodProd] FROM [Productos]"></asp:SqlDataSource>
+        <br class="auto-style1" />
+        <br class="auto-style1" />
+        <span class="auto-style1">Cantidad:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</span><asp:TextBox ID="Cant" runat="server" CssClass="auto-style1"></asp:TextBox>
+        <span class="auto-style1">&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </span>
+        <br class="auto-style1" />
+        <br class="auto-style1" />
+        <span class="auto-style1">Precio:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; </span>
+        <asp:TextBox ID="Precio" runat="server" CssClass="auto-style1"></asp:TextBox>
+        <br class="auto-style1" />
+        <br class="auto-style1" />
+        <span class="auto-style1">Subtotal:&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; </span>
+        <asp:TextBox ID="Sub" runat="server" CssClass="auto-style1"></asp:TextBox>
+        <br class="auto-style1" />
+        <br class="auto-style1" />
+        <span class="auto-style1">Número de venta:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;</span><asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="VerVenta" DataTextField="NumV" DataValueField="NumV" CssClass="auto-style1">
+        </asp:DropDownList>
+        <asp:SqlDataSource ID="VerVenta" runat="server" ConnectionString="<%$ ConnectionStrings:abarrotesConnectionString %>" SelectCommand="SELECT [NumV] FROM [Ventas]"></asp:SqlDataSource>
+        <span class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+        </span>
+        <br class="auto-style1" />
+        <br class="auto-style1" />
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Actualizar Venta" CssClass="auto-style1" style="color: #FFFFFF; background-color: #FF9900" />
+        <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Ventas_NumV,Productos_CodProd" DataSourceID="ActualizarProductosV">
+            <Columns>
+                <asp:BoundField DataField="Cantidad" HeaderText="Cantidad" SortExpression="Cantidad" />
+                <asp:BoundField DataField="PrecioV" HeaderText="PrecioV" SortExpression="PrecioV" />
+                <asp:BoundField DataField="Subtotal_Prod" HeaderText="Subtotal_Prod" SortExpression="Subtotal_Prod" />
+                <asp:BoundField DataField="Ventas_NumV" HeaderText="Ventas_NumV" SortExpression="Ventas_NumV" ReadOnly="True" />
+                <asp:BoundField DataField="Productos_CodProd" HeaderText="Productos_CodProd" SortExpression="Productos_CodProd" ReadOnly="True" />
+            </Columns>
+        </asp:GridView>
+        <asp:SqlDataSource ID="ActualizarProductosV" runat="server" ConnectionString="<%$ ConnectionStrings:abarrotesConnectionString %>" SelectCommand="ActualizarProductosv" SelectCommandType="StoredProcedure">
+            <SelectParameters>
+                <asp:ControlParameter ControlID="Cant" Name="Cantidad" PropertyName="Text" Type="Int32" />
+                <asp:ControlParameter ControlID="Precio" Name="PrecioV" PropertyName="Text" Type="Decimal" />
+                <asp:ControlParameter ControlID="Sub" Name="Subtotal_Prod" PropertyName="Text" Type="Decimal" />
+                <asp:ControlParameter ControlID="DropDownList2" Name="Ventas_NumV" PropertyName="SelectedValue" Type="Int32" />
+                <asp:ControlParameter ControlID="DropDownList1" Name="Productos_CodProd" PropertyName="SelectedValue" Type="Int32" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+    </form>
+</body>
+</html>
+
+
+<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="WebFormBorrarVentas.aspx.vb" Inherits="ProcedimientoBorrarVentas.WebFormBorrarVentas" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: large;
+            color: #FF9900;
+        }
+        .auto-style3 {
+            font-family: "Segoe UI Variable Display Semib";
+            font-size: medium;
+        }
+        .auto-style4 {
+            font-family: "Segoe UI Variable Display Semib";
+        }
+        .auto-style5 {
+            font-family: "Segoe UI Variable Display Semib";
+            font-size: large;
+            color: #FF9900;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="auto-style1">&nbsp;</span><span class="auto-style5">BORRAR VENTAS</span></div>
+        <p>
+            <span class="auto-style4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span> <span class="auto-style3">Para eliminar una venta se requiere el número de ventas.</span></p>
+        <p>
+            <span class="auto-style4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span> <span class="auto-style3">Número de ventas (NumV): </span><span class="auto-style4">&nbsp;&nbsp;
+            </span>
+            <asp:TextBox ID="txtNumV" runat="server" CssClass="auto-style4"></asp:TextBox>
+        </p>
+        <p>
+            <span class="auto-style4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <asp:Button ID="BorrarVenta" runat="server" BackColor="#FF9900" Text="Borrar Venta" CssClass="auto-style4" ForeColor="White" />
+        </p>
+    </form>
+</body>
+</html>
+
